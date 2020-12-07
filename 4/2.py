@@ -8,8 +8,7 @@ PID = re.compile(r'^[0-9]{9}$')
 
 
 def hgt_ok(hgt):
-    hgt = re.match(HGT, hgt)
-    if not hgt:
+    if not(hgt := re.match(HGT, hgt)):
         return False
     num = int(hgt.group(1))
     unit = hgt.group(2)
