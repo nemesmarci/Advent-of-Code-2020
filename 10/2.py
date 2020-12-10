@@ -1,5 +1,4 @@
-from functools import reduce
-from operator import mul
+from math import prod
 
 from common import get_jolts, get_diffs
 
@@ -10,4 +9,4 @@ def tribo(n):
 
 
 diffs = map(len, ''.join(map(str, get_diffs(get_jolts()))).split('3'))
-print(reduce(mul, map(tribo, diffs)))
+print(prod(map(tribo, diffs)))
