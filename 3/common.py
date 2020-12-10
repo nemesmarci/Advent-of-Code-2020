@@ -1,5 +1,4 @@
-from operator import mul
-from functools import reduce
+from math import prod
 
 
 def solve(slopes):
@@ -21,4 +20,4 @@ def solve(slopes):
             x %= width
             y += down
         trees.append(n)
-    return reduce(mul, trees)
+    return prod(trees)
